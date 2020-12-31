@@ -3,46 +3,62 @@
     <head>
         <meta name="viewport" content="width=device-width">
         <meta name="author" content="Alyssa Song">
-        <title>Alyssa Song | Main</title>
+        <title>Alyssa Song | Portfolio</title>
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
-        <header>
-            <div class="container">
-                <div id="intro">
-                    <h1><span class="highlight">welcome</span> to my website!</h1>
+        <div class="sidenav">
+            <header>
+                <span>Alyssa Song</span>
+            </header>
+            <nav class="nav-list">
+                <a href="#homepage">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#!" class="dropdown-btn">Contact<i class="fa fa-caret-left"></i></a>
+                <div class="contact-dropdown">
+                    <a href="tel:905 385 8858">(905) 385-8858</a>
+                    <a href="mailto:alyssasong2008@gmail.com">alyssasong2008@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/alyssa-song/" target="_blank">linkedin</a>
+                    <a href="https://github.com/alyssa-song" target="_blank">github</a>
                 </div>
-                <nav>
-                    <ul>
-                        <li class="current"><a href="index.html">home</a></li>
-                        <li class="current"><a href="about.html">about</a></li>
-                        <li class="current"><a href="projects.html">projects</a></li>
-                        <li class="current"><a href="experience.html">experience</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
-        <section id="homepage">
-            <div class="container">
-                <h1>hi, my name's alyssa</h1>
-                <p>this is my personal website</p>
-            </div>
-        </section>
-
-      
-        
-        <p>I'm hosted with GitHub Pages.</p>
-
-        <footer>
-            <div class="container">
-                <ul>
-                    <li><a href="tel:905 385 8858">phone: (905) 385-8858</a></li>
-                    <li><a href="mailto:alyssasong2008@gmail.com">email: alyssasong2008@gmail.com</a></li>
-                    <li><a href="https://www.linkedin.com/in/alyssa-song/" target="_blank">linkedin</a></li>
-                    <li><a href="https://github.com/alyssa-song" target="_blank">github</a></li>
-                </ul>
-            </div>
-        </footer>
+            </nav>
+          </div>
+        <div class="main">
+            <section id="homepage">
+                <div class="container">
+                    <div class="home-block">
+                        <img src="img/profile.jpg" class="img-profile">
+                        <div class="intro">
+                            <h1>Hi! I'm Alyssa</h1>
+                            <p>computer science student</p>
+                            <p>@ the university of waterloo</p>
+                            <p>seeking summer 2021 internship opportunities in software development</p>
+                        </div>
+                    </div>
+                    <div class="centered">
+                        <button id="resume">
+                            <a href="Resume 2021.pdf" target="_blank">resume</a>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section id="about">
+                <div class="container">
+                    <h1>more about me</h1>
+                    <p>Hi, my name's Alyssa and I'm a second year computer science student at the University of Waterloo.</p>
+                </div>
+            </section>
+            <section id="projects">
+                <div class="container">
+                    <h1>projects</h1>
+                    <p>These are my projects.</p>
+                </div>
+            </section>
+        </div>
     </body>
 </html>
+
+<script src="javascript/scripts.js"></script>

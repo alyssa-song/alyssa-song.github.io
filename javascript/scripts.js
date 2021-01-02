@@ -4,10 +4,10 @@ $(".dropdown-btn").click( function(){
     var dropdown = $(".contact-dropdown");
     if (dropdown.css("display") === "block") {
         dropdown.css("display","none");
-        $(".dropdown-btn").html('Contact<i class="fa fa-caret-left"></i>');
+        $(".dropdown-btn").html('contact<i class="fa fa-caret-left"></i>');
     } else {
         dropdown.css("display","block");
-        $(".dropdown-btn").html('Contact<i class="fa fa-caret-down"></i>');
+        $(".dropdown-btn").html('contact<i class="fa fa-caret-down"></i>');
     }
 });
 

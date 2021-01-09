@@ -1,5 +1,4 @@
-/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content 
-- This allows the user to have multiple dropdowns without any conflict */
+// toggles dropdown contacts menu
 $(".dropdown-btn").click( function(){
     var dropdown = $(".contact-dropdown");
     if (dropdown.css("display") === "block") {
@@ -11,9 +10,32 @@ $(".dropdown-btn").click( function(){
     }
 });
 
+// toggles caret for contact dropdown
 $(document).on('click', 'a[href^="#"]', function (e) {
     e.preventDefault();
     $('html, body').stop().animate({
         scrollTop: $($(this).attr('href')).offset().top
     }, 500, 'linear');
+});
+
+// toggles sidebar navigation menu
+$(".fa-bars").click( function(){
+    var sidenav = $(".sidenav");
+    if (sidenav.css("display") === "none") {
+        sidenav.fadeIn(200);
+        $(this).css("color", "white");
+    } else {
+        sidenav.fadeOut(200);
+        $(this).css("color", "#91be89");
+    }
+});
+
+// clicking elsewhere will close sidebar navigation menu
+$(".main").click(function() {
+    var sidenav = $(".sidenav");
+    var menu_btn = $(".fa-bars");
+    if (menu_btn.css("z-index") === "2" && !sidenav.css("display") != "none") {
+        sidenav.fadeOut(200);
+        menu_btn.css("color", "#91be89");
+    }
 });

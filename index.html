@@ -9,8 +9,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
+        <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
         <div class="sidenav">
-            <header class="centered">
+            <header style="text-align: center;">
                 <img src="img/profile.jpg" id="img-profile">
                 <span class="overlay">Alyssa Song</span>
             </header>
@@ -25,27 +26,39 @@
                     <a href="https://github.com/alyssa-song" target="_blank">github</a>
                 </div>
             </nav>
-            <button id="resume">
-                <a href="Resume 2021.pdf" target="_blank">resume</a>
-            </button>
+            <a id="resume" href="Resume 2021.pdf" target="_blank">resume</a>
           </div>
         <div class="main">
             <section id="about">
                 <div class="container">
                     <div class="intro">
                         <h1>Hi! I'm Alyssa</h1>
-                        <p>I'm a 2nd year Computer Science student at the University of Waterloo.</p>
-                        <p>I worked at Axsium Group as an solutions developer where I was in charge of the testing and were given some development opportunities. 
+                        <p>I'm a 2nd year Computer Science student at the University of Waterloo. In my spare time, I enjoy hiking, baking and playing board games.</p>
+                        <p>Previously, I worked as a solutions developer where I was in charge of testing and given opportunities to explore development. 
                             I'm currently seeking summer 2021 internship opportunities in software development.</p>
-                        <p>Check out some of my projects!</p>
+                        <p>Check out some of my projects below!</p>
                     </div>
                 </div>
             </section>
-            <img src="img/page-break.png" id="page-break">
+            <div class="section-break" style="text-align: center;">
+                <img src="img/divider.png" id="divider">
+                <img src="img/divider.png" id="divider">
+            </div>
             <section id="projects">
                 <div class="container">
-                    <h1>projects</h1>
-                    <p>These are my projects.</p>
+                    <h1>Projects</h1>
+                    <div class="scrolling-projects">
+                        <div class="project-col">
+                            <h2>Project 1</h2>
+                            <img src="img/website.JPG" class="project-img">
+                        </div>
+                        <div class="project-col">
+                            <h2>Project 2</h2>
+                        </div>
+                        <div class="project-col">
+                            <h2>Project 3</h2>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

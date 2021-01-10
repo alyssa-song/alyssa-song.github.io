@@ -39,3 +39,30 @@ $(".main").click(function() {
         menu_btn.css("color", "#91be89");
     }
 });
+
+$(function() {
+    $("#website-img")
+        .mouseover(function() { 
+            $(this).fadeTo(100, 0.5, function() {
+                $(this).attr("src", "img/website2.jpg");
+            }).fadeTo(100, 1);
+        })
+        .mouseout(function() {
+            $(this).fadeTo(100, 0.5, function() {
+                $(this).attr("src", "img/website1.jpg");
+            }).fadeTo(100, 1);
+        });
+
+    $("#planner-img")
+        .mouseover(function() { 
+            $(this).fadeTo(100, 0.5, function() {
+                $(this).attr("src", "img/planner2.jpg");
+            }).fadeTo(100, 1);
+        })
+        .mouseout(function() {
+            $(this).fadeTo(100, 0.5, function() {
+                $(this).attr("src", "img/planner1.jpg");
+            }).fadeTo(100, 1);
+        });
+});
+

@@ -64,5 +64,17 @@ $(function() {
                 $(this).attr("src", "img/planner1.jpg");
             }).fadeTo(100, 1);
         });
+
+    $("#tetris-img")
+        .mouseover(function() { 
+            $(this).fadeTo(100, 0.5, function() {
+                $(this).attr("src", "img/tetris2.jpg");
+            }).fadeTo(100, 1);
+        })
+        .mouseout(function() {
+            $(this).fadeTo(100, 0.5, function() {
+                $(this).attr("src", "img/tetris1.jpg");
+            }).fadeTo(100, 1);
+        });
 });
 

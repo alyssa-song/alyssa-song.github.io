@@ -8,7 +8,7 @@ body{
 
 /* global main page */
 .main {
-    margin-left: 300px; /* Same as the width of the sidebar */
+    margin-left: 25vw; /* Same as the width of the sidebar */
     text-align: center;
 }
 
@@ -19,21 +19,23 @@ section {
 .container {
     padding: 5% 5%;
     text-align: left;
-    margin-left: 50px;
+    margin-left: 5%;
 }
 
 h1{
-    font-size:30px;
+    font-size:5vh;
     margin-bottom:10px;
 }
 
 h2 {
-    font-size:18px;
-    margin: 10px 0px;
+    font-size:2.5vh;
+    font-weight:bold;
+    margin: 5% 0px;
+    text-align: left;
 }
 
 p {
-    font-size: 20px;
+    font-size: 3vh;
     margin: 1 rem;
 }
 
@@ -71,29 +73,51 @@ a {
     background-color: #67995e;
 }
 
-/* On smaller screens, make sidebar retractable and make font smaller */
-@media screen and (max-width: 775px) {
+/* square screens*/
+@media (min-aspect-ratio: 4/4) {
+    .sidenav {width: 25vw;}
+    .sidenav nav {font-size: 1.55vw;}
+    .sidenav .contact-dropdown {font-size: 1vw;}  
+    #resume {font-size: 1.35vw; padding: 0px 2vw; right: 32%;}
+    .main {margin-left: 25vw}
+    .fa-bars {z-index: 0;}
+    .sidenav {display: block;}
+    .scrolling-projects {overflow-y: hidden; grid-template-columns: repeat(3, 100%);}
+    .project-col{display: grid; grid-gap: 20px; grid-template-columns: 40% 50%;}
+    .project-img {max-width: 100%; max-height: 80%}
+}
+
+/* wide horizontal screens*/
+@media (min-aspect-ratio: 7/4) {
+    .sidenav {width: 25vw;}
+    .sidenav nav {font-size: 1.55vw;}
+    .sidenav .contact-dropdown {font-size: 1vw;}  
+    #resume {font-size: 1.35vw; padding: 0px 2vw; right: 32%;}
+    .main {margin-left: 25vw}
+    .fa-bars {z-index: 0;}
+    .sidenav {display: block;}
+    .scrolling-projects {overflow-y: hidden; grid-template-columns: repeat(3, 46%);}
+    .project-col{display: grid; grid-gap: 20px; grid-template-columns: 40% 50%;}
+    .project-img {max-width: 100%;}
+}
+
+/* vertical screens*/
+@media (max-aspect-ratio: 4/4) {
+    .sidenav {width: 300px;}
+    .sidenav nav {font-size: 3.5vh;}
+    .sidenav .contact-dropdown {font-size: 2vh;}  
+    #resume {font-size: 3vh; padding: 0px 30px; right: 90px;}
     .main {margin-left: 0px}
     .fa-bars {z-index: 2;}
     .sidenav {display: none;}
-    h1 {font-size: 30px;}
-    p {font-size: 20px;}
-    .scrolling-projects {grid-template-columns: repeat(3, 100%);}
-}
-
-@media screen and (min-width: 776px) {
-    .main {margin-left: 300px}
-    .fa-bars {z-index: 0;}
-    .sidenav {display: block;}
-    h1 {font-size: 30px;}
-    p {font-size: 20px;}
-    .scrolling-projects {grid-template-columns: repeat(3, 45%);}
+    .scrolling-projects {overflow-y:scroll; grid-template-columns: repeat(3, 100%);}
+    .project-col{display: block; padding: 10%;}
+    .project-img {max-height: 60%;}
 }
 
 /* side navigation */
 .sidenav {
     height: 100%;
-    width: 300px;
     position: fixed;
     z-index: 1; /* Stay on top */
     top: 0;
@@ -108,27 +132,26 @@ a {
 }
 
 #profile-img {
+    max-width: 75%;
+    /*<span class="overlay">Alyssa Song</span>
     border-radius: 50%;
-    max-width: 200px;
-    border: 2px solid #f1f1f1;
+    border: 2px solid #f1f1f1;*/
 }
 
-.overlay {
+/*.overlay {
     position: fixed;
     display: block;
-    width: 200px;
-    height: fit-content;
+    padding: 0px 2vw;
     top: 180px;
     left: 50px;
-    background-color: #91be8996; /* background with opacity */
+    background-color: #91be8996;
     border: 2px solid;
     border-color: white;
     font-size: 25px;
-}
+}*/
   
 .sidenav nav {
     padding: 2% 10% 5%;
-    font-size: 22px;
 }
 
 .sidenav a {
@@ -150,19 +173,15 @@ a {
     display: none;
     width: 95%;
     padding-left: 5%;
-    font-size: 15px;
 }
 
 #resume {
     border: 2px solid;
     border-color: white;
     color: white;
-    position: fixed;
-    padding-block: 0px;
-    width: 150px;
-    bottom: 40px;
-    left: 75px;
-    font-size: 18px;
+    width: fit-content;
+    position: absolute;
+    bottom: 5%;
 }
 
 #resume:hover {
@@ -177,11 +196,15 @@ a {
 }
 
 #about .intro{
-    margin-top: 12%;
+    margin-top: 15%;
 }
 
 
 /* projects */
+.fa-github{
+    color:#67995e;
+}
+
 #projects{
     position: relative;
     text-align:center;
@@ -198,28 +221,25 @@ a {
 }
 
 .project-col{
-    display: grid; 
-    grid-template-columns: 40% 50%;
-    grid-gap: 20px;
     align-items: center;
-    padding: 40px;
+    justify-content: center;
+    text-align: center;
+    padding-left: 10%;
+    padding-right:10%;
+    height: inherit;
     background: #91be898a;
     color: #67995e;
 }
 
 .tools {
-    font-size: 12px;
+    font-size: 1.75vh;
     font-style: italic;
     text-align: left;
 }
 
 .description {
-    font-size: 15px;
-    margin: 7.5px 0px;
+    font-size: 2.25vh;
+    margin: 1vh 0px;
     text-align: justify;
 }
 
-.project-img {
-    max-width: 100%;
-    max-height: 80%;
-}

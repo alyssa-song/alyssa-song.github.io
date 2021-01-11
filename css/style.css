@@ -134,18 +134,18 @@ a {
 }
 
 #profile-img {
-    max-width: 75%;
-    /*<span class="overlay">Alyssa Song</span>
-    border-radius: 50%;
+    max-width: 85%;
+    /*border-radius: 50%;
     border: 2px solid #f1f1f1;*/
 }
 
 /*.overlay {
+    <span class="overlay">Alyssa Song</span>
     position: fixed;
     display: block;
-    padding: 0px 2vw;
-    top: 180px;
-    left: 50px;
+    padding: 0px 3vw;
+    top: 210px;
+    left: 62px;
     background-color: #91be8996;
     border: 2px solid;
     border-color: white;

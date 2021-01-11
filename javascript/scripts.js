@@ -40,6 +40,7 @@ $(".main").click(function() {
     }
 });
 
+// hovering over pictures in projects section will show different picture
 $(function() {
     $("#website-img")
         .mouseover(function() { 

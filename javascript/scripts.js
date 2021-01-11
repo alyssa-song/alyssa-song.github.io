@@ -69,12 +69,12 @@ $(function() {
     $("#tetris-img")
         .mouseover(function() { 
             $(this).fadeTo(100, 0.5, function() {
-                $(this).attr("src", "img/tetris2.jpg");
+                $(this).attr("src", "img/tetris2.JPG");
             }).fadeTo(100, 1);
         })
         .mouseout(function() {
             $(this).fadeTo(100, 0.5, function() {
-                $(this).attr("src", "img/tetris1.jpg");
+                $(this).attr("src", "img/tetris1.JPG");
             }).fadeTo(100, 1);
         });
 });
